@@ -1,0 +1,18 @@
+$white: #ffffff;
+$black: #000000;
+$blue-s: rgb(200, 200, 255);
+
+.skilltable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.skilltable__header{
+  background: $blue-s;
+  text-transform: uppercase;
+  font-family: Sans-serif;
+  text-align: left;
+  color: $black;
+  padding: 5px 5px;
+  letter-spacing: 1px;
+}

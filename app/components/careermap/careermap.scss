@@ -1,0 +1,87 @@
+$white: #ffffff;
+$black: #000000;
+$blue-s: rgb(200, 200, 255);
+$blue-m: rgb(150, 150, 255);
+$blue-l: rgb(100, 100, 255);
+$blue-xl: rgb(0, 0, 150);
+
+.careermap {
+  border-collapse: collapse;
+}
+
+@define-extend step {
+  color: $white;
+  font-size: 12px;
+  padding: 15px;
+  font-family: Sans-Serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.careermap__startsteps {
+  @extend step;
+  background: $blue-s;
+}
+
+.careermap__midsteps {
+  @extend step;
+  background: $blue-m;
+}
+
+.careermap__endsteps {
+  @extend step;
+  background: $blue-l;
+}
+
+@define-extend meta {
+  color: $white;
+  background: $blue-xl;
+  font-family: Sans-Serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  padding: 10px 5px;
+}
+
+.careermap__stepheader {
+  @extend meta;
+  vertical-align: top;
+  text-align: left;
+  font-size: 14px;
+  height: 60px;
+  width: 150px;
+}
+
+.careermap__name {
+  @extend meta;
+  font-size: 3em;
+}
+
+.careermap__categoryheader {
+  @extend meta;
+  text-align: left;
+  font-size: 14px;
+  color: $white;
+}
+
+.careermap__capabillity {
+  @extend meta;
+  font-size: 14px;
+  text-align: center;
+}
+
+.careermap__definition {
+  width: 10%;
+  text-align: left;
+  padding: 15px 5px;
+  font-family: Sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  color: $black;
+}
+
+.careermap__definitiontext {
+  height: 125px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+

@@ -1,0 +1,44 @@
+$grey: #bebebe;
+$orange: #FF800D;
+$green: #1FCB4A;
+
+.skilltablerow__skillgroup {
+  font-family: Sans-Serif;
+  vertical-align: top;
+  padding: 0 5px;
+  width: 17.3%;
+}
+
+.skilltablerow__skill {
+  font-family: Sans-Serif;
+  width: 13%;
+  padding: 0 10px;
+}
+
+.skilltablerow__step {
+  font-family: Sans-Serif;
+  width: 10%;
+  padding: 0 5px;
+  text-align: center;
+}
+
+.skilltablerow__step--current {
+  font-family: Sans-Serif;
+  width: 10%;
+  padding: 0 5px;
+  text-align: center;
+  background: $orange;
+}
+
+.skilltablerow__step--done {
+  font-family: Sans-Serif;
+  width: 10%;
+  padding: 0 5px;
+  text-align: center;
+  background: $green;
+}
+
+.skilltablerow__step--empty {
+  background: $grey;
+}
+
