@@ -1,5 +1,6 @@
 'use strict';
 
+import Overlay    from '../../containers/overlay';
 import React      from 'react';
 import SkillTable from '../skillTable';
 import styles     from './careermap.scss';
@@ -53,6 +54,7 @@ export default class Careermap extends React.Component {
   render() {
     return (
         <div>
+        <Overlay />
         <table className="careermap">
         <thead>
         <tr>

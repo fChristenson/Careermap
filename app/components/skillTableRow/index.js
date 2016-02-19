@@ -16,8 +16,13 @@ export default class extends React.Component {
       else {
         classname = 'skilltablerow__step';
       }
-      return <td className={classname} key={index}>{step.name}</td>;
-    });
+      return <td 
+      className={classname} 
+      key={index} 
+      onClick={this.props.showOverlay(this.props.skillGroup, this.props.skill, step.name, step.text)}>
+      {step.name}
+      </td>;
+    }.bind(this));
     var i;
     var skillGroup;
     if (steps.length < this.props.totalSteps) {
@@ -25,10 +30,9 @@ export default class extends React.Component {
         steps.unshift(<td className="skilltablerow__step--empty"  key={i}></td>);
       }
     }
-    if (this.props.skillGroup) {
+    if (this.props.rowSpan > 1) {
       skillGroup = <td  className="skilltablerow__skillgroup" rowSpan={this.props.rowSpan}>{this.props.skillGroup}</td>;
     }
-
     return (<tr key={this.props.key}>
         {skillGroup}
         <td className="skilltablerow__skill">{this.props.skill}</td>

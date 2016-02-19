@@ -13,6 +13,7 @@ module.exports = {
     filename: 'bundle.js'
 
   },
+  devtool: 'evaluate-source-map',
   devServer: {
     contentBase: path.join(__dirname, 'dist')
   },

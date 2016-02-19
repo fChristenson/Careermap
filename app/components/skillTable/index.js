@@ -2,7 +2,7 @@
 
 import React         from 'react';
 import styles        from './skilltable.scss';
-import SkillTableRow from '../skillTableRow';
+import SkillTableRow from '../../containers/skillTableRow';
 
 export default class extends React.Component {
   render() {
@@ -23,6 +23,7 @@ export default class extends React.Component {
               key={Math.random()} 
               steps={skill.steps} 
               totalSteps={this.props.steps.length}
+              skillGroup={group.groupName} 
               skill={skill.name} 
               rowSpan={1} />);
         }

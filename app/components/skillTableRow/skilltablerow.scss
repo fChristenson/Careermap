@@ -15,27 +15,34 @@ $green: #1FCB4A;
   padding: 0 10px;
 }
 
-.skilltablerow__step {
+@define-extend step {
   font-family: Sans-Serif;
   width: 10%;
   padding: 0 5px;
   text-align: center;
+}
+
+.skilltablerow__step {
+  @extend step;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .skilltablerow__step--current {
-  font-family: Sans-Serif;
-  width: 10%;
-  padding: 0 5px;
-  text-align: center;
+  @extend step;
   background: $orange;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .skilltablerow__step--done {
-  font-family: Sans-Serif;
-  width: 10%;
-  padding: 0 5px;
-  text-align: center;
+  @extend step;
   background: $green;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .skilltablerow__step--empty {
