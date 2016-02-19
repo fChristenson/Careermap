@@ -19,7 +19,7 @@ export default class extends React.Component {
       return <td 
       className={classname} 
       key={index} 
-      onClick={this.props.showOverlay(this.props.skillGroup, this.props.skill, step.name, step.text)}>
+      onClick={this.props.showOverlay(this.props.skill + ' - ' + step.name, step.text)}>
       {step.name}
       </td>;
     }.bind(this));

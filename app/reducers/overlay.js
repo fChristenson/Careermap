@@ -2,10 +2,8 @@
 
 let initialState = {
   showOverlay: false,
-  skillCategory: 'TestType',
-  skillName: 'TestName',
-  skillStep: 'TestTitle',
-  text: 'TestText'
+  header: 'Header',
+  text: 'Text'
 };
 
 export default function(state = initialState, action) {
@@ -13,9 +11,7 @@ export default function(state = initialState, action) {
     case 'SHOW_OVERLAY':
       let nextState = {
         showOverlay: action.showOverlay,
-        skillCategory: action.skillCategory,
-        skillName: action.skillName,
-        skillStep: action.skillStep,
+        header: action.header,
         text: action.text
       };
       return Object.assign({}, state, nextState);

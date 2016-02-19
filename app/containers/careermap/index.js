@@ -11,4 +11,18 @@ const mapStateToProps = function(state) {
   };
 };
 
-export default connect(mapStateToProps)(Careermap);
+const mapDispatchToProps = function(dispatch) {
+  return {
+    showOverlay: function(header, text) {
+      return function() {
+        dispatch({
+          type: 'SHOW_OVERLAY',
+          header: header,
+          text: text,
+          showOverlay: true});
+      };
+    }
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Careermap);

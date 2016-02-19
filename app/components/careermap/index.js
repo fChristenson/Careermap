@@ -34,14 +34,20 @@ export default class Careermap extends React.Component {
 
   getFocuses() {
     return this.props.steps.map(function(step, index) {
-      return <th className="careermap__definition" key={index}><div className="careermap__definitiontext">{step.focus}</div></th>;
-    });
+      return <th 
+        className="careermap__definition" 
+        onClick={this.props.showOverlay('Focus - ' + step.title, step.focus)} key={index}>
+        <div className="careermap__definitiontext">{step.focus}</div>
+        </th>;
+    }.bind(this));
   }
 
   getExperiences() {
     return this.props.steps.map(function(step, index) {
-      return <th className="careermap__definition" key={index}>{<div className="careermap__definitiontext">{step.experience}</div>}</th>;
-    });
+      return <th className="careermap__definition" onClick={this.props.showOverlay('Experience - ' + step.title, step.experience)} key={index}>
+      <div className="careermap__definitiontext">{step.experience}</div>
+      </th>;
+    }.bind(this));
   }
 
   getTitles() {

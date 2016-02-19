@@ -6,10 +6,8 @@ import Overlay   from '../../components/overlay';
 const mapStateToProps = function(state) {
   return {
     isVisible: state.overlay.showOverlay,
-    skillName: state.overlay.skillName,
-    text: state.overlay.text,
-    skillStep: state.overlay.skillStep,
-    skillCategory: state.overlay.skillCategory
+    header: state.overlay.header,
+    text: state.overlay.text
   };
 };
 

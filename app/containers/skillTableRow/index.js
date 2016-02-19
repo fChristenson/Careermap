@@ -9,13 +9,11 @@ const mapStateToProps = function(state) {
 
 const mapDispatchToProps = function(dispatch) {
   return {
-    showOverlay: function(category, skill, step, text) {
+    showOverlay: function(header, text) {
       return function() {
         dispatch({
           type: 'SHOW_OVERLAY',
-          skillCategory: category,
-          skillName: skill,
-          skillStep: step,
+          header: header,
           text: text,
           showOverlay: true});
       };

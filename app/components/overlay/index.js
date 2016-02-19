@@ -8,9 +8,7 @@ export default class Overlay extends React.Component {
     let classname = 'overlay';
     classname += this.props.isVisible ? ' is-visible' : '';
     return(<div onClick={this.props.close} className={classname}>
-        <h1>Skill Category: {this.props.skillCategory}</h1>
-        <h2>Skill name: {this.props.skillName}</h2>
-        <h2>Skill step: {this.props.skillStep}</h2>
+        <h1>{this.props.header}</h1>
         <p>{this.props.text}</p>
         </div>);
   }
